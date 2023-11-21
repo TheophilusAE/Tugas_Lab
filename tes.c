@@ -1,21 +1,19 @@
 #include <stdio.h>
 
 int main () {
-	int a,b,c;
-	
-	printf ("Masukan 3 angka : ");
-	scanf ("%d %d %d",&a,&b,&c);
-	
-	if ((a > b) && (a > c)) {
-		printf ("%d",a);
-	}
-	else if ((b > a) && (b > c)) {
-		printf ("%d",b);
-	}
-	else if ((c > a) && (c > b)) {
-		printf ("%d",c);
+    char nama[5] [10];
+    int umur[5];
+    int i;
+    
+    for (i=1;i<=5;i++) {
+		printf ("Masukan nama orang ke - %d : ",i);
+		scanf ("%s",nama[i]);
+		printf ("masukan umur oran ke - %d : ",i);
+		scanf ("%d",&umur[i]);
 	}
 	
-return 0;
+	for (i=1;i<=5;i++) {
+		printf ("nama orang ke - %d = %s\n",i,nama[i]);
+		printf ("umur orang ke - %d = %d\n",i,umur[i]);
+	}
 }
-
